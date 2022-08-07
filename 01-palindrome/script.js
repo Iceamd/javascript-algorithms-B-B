@@ -13,12 +13,16 @@
  * 
 */
 
-function palindrome(str) {
-    // Напишите код здесь
+function palindrome(str) {  
+    str = str.toLowerCase()  
+    let l= str.length;
+    for (let i = 0; i < l / 2; i++) {
+        if (str.charAt(i) !== str.charAt(l - 1 - i)) {
+            return false;
+        }
+    }
+    return true;
 }
-
-// Протестируйте решение, вызывая функцию с разными аргументами:
-
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false

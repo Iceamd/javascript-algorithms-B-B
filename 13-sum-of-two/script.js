@@ -9,7 +9,16 @@
 */
 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+
+    let ans = false;
+    arr.forEach(function (a) {
+        switch (true) {
+            case ((arr.indexOf(sum - a) >= 0) && ((sum - a) !== arr[a - 1])):
+                ans = true;
+                break;
+        }
+    });
+    return ans;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
