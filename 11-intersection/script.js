@@ -8,7 +8,16 @@
 */
 
 function intersection(arr1, arr2) {
-    // Напишите код здесь
+    let ans1 = true;
+    let res = [];
+
+    arr1.every(function (a) {
+        ans1 = arr2.includes(a);
+        if (ans1)
+            res.push(a);
+        return true;
+    })
+    return res;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

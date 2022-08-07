@@ -8,11 +8,11 @@
 
 function capitalize(str) {
     const mas = str.split(' '); 
-    let res=[];
+    const res=[];
     
     mas.forEach(function(word){
       let firstLetter = word.slice(0,1);
-      res.push( firstLetter.toUpperCase() + word.slice(1) );
+      res.push(firstLetter.toUpperCase() + word.slice(1) );
     })
 
     return res.join(' '); 

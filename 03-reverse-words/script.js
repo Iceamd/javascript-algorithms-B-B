@@ -10,7 +10,7 @@
 
 function reverseWords(str) {
     const mas = str.split(' ');
-    let res = [];
+    const res = [];
 
     for (let i = 0; i < mas.length; i++) {
         res[i] = mas[mas.length - i - 1];
