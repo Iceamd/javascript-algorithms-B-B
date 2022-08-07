@@ -15,7 +15,7 @@
 
 function palindrome(str) {  
     str = str.toLowerCase()  
-    let l= str.length;
+    const l= str.length;
     for (let i = 0; i < l / 2; i++) {
         if (str.charAt(i) !== str.charAt(l - 1 - i)) {
             return false;

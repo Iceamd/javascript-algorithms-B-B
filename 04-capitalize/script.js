@@ -7,7 +7,7 @@
 */
 
 function capitalize(str) {
-    let mas = str.split(' '); 
+    const mas = str.split(' '); 
     let res=[];
     
     mas.forEach(function(word){
