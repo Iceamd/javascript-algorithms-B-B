@@ -8,16 +8,13 @@
 */
 
 function intersection(arr1, arr2) {
-    let ans1 = true;
-    let res = [];
+    const intersectionArray = arr1.filter(function (item) {
+        return arr2.includes(item);
+    });
 
-    arr1.every(function (a) {
-        ans1 = arr2.includes(a);
-        if (ans1)
-            res.push(a);
-        return true;
-    })
-    return res;
+    return intersectionArray.filter(function (item, index) {
+        return intersectionArray.lastIndexOf(item) === index;
+    });
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

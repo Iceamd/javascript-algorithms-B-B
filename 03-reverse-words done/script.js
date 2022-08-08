@@ -8,7 +8,7 @@
  *
 */
 
-function reverseWords(str) {
+function reverseWords(str) { 
     const mas = str.split(' ');
     const res = [];
 

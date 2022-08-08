@@ -10,15 +10,13 @@
 */
 
 function findVowels(str) {
-    const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
-    let res = 0;
-
-    for (let i = 0; i < str.length; i++) {
-        if (vowels.includes(str[i])) {
-            res += 1;
-        }
-    }
-    return res;
+    const vowelsArray = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+    return str.toLowerCase().split('').reduce(function (vowelsAmount, item) {
+        if (vowelsArray.indexOf(item) !==-1) { 
+            vowelsAmount++;
+         }
+         return vowelsAmount;
+    }, 0);
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

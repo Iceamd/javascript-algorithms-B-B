@@ -7,7 +7,16 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+    let zerosResult = 0;
+    for (let i = 1; i <= n; i++) {
+        const numbersArray = String(i).split('');
+        for (let i = 0; i <= numbersArray.length; i++) {
+            if (numbersArray[i] === '0') {
+                zerosResult++;
+            }
+        }
+    }
+    return zerosResult;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
